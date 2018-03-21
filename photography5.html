@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Ursula Uday_Photography  </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.mySlides {display:none}
+</style>
+<body class="w3-content w3-border-left w3-border-right">
+
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div class="w3-container" id="scenic photos">
+      <div class="w3-display-container mySlides">
+    <img src="photos/a (17).jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <h8>Coloured Smudges</h8>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="photos/a (18).jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <h8>The Silver Lining indeed</h8>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="photos/a (19).jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <h8>Mirror-Mirror on the Floor</h8>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="photos/a (20).jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <h8>When Land begins to mimic the Sea-Waves</h8>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="photos/a (17).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="photos/a (18).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="photos/a (19).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="photos/a (20).jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+    </div>
+  </div>
+
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-black">Home</a>
+      <a href="photography1.html" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="photography2.html" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="photography3.html" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="photography4.html" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="photography5.html" class="w3-bar-item w3-black w3-button">5</a>  
+      <a href="photography6.html" class="w3-bar-item w3-button w3-hover-black">6</a>
+      <a href="photography7.html" class="w3-bar-item w3-button w3-hover-black">7</a>
+      </div>
+  </div>
+  
+<script>
+// Slideshow Apartment Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+</body>
+</html>
